@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from repo.views import all_repo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('repo',all_repo,name="all_repo"),
+
 ]
