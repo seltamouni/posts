@@ -1,0 +1,11 @@
+<h2>detail repository</h2>
+
+{{repo.title}}
+<hr>
+{{repo.stars}}
+<hr>
+{{repo.forks}}
+<hr>
+{{repo.watching}}
+<a href="{% url 'edit_repo' repo.id%}">Edit post </a>
+<a href="{% url 'delete_repo' repo.id%}">delete post </a>

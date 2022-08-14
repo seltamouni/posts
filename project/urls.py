@@ -15,10 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from repo.views import all_repo
+from repo.views import delete_repo, new_repo,all_repo,single_repo,home,edit_repo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('repo',all_repo,name="all_repo"),
+    path('',home),
+    path('repo/',all_repo,name="all_repo"),
+    path('repo/<int:id>',single_repo,name="single_repo"),
+    path('repo/<int:id>/edit', edit_repo, name="edit_repo"),
+    path('repo/new', new_repo, name="new_repo"),
+    path('repo/<int:id>/delete', delete_repo, name="delete_repo")
+
 
 ]

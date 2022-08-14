@@ -13,6 +13,7 @@ class Post(models.Model):
     stars = models.IntegerField(max_length=5)
     watching = models.IntegerField(max_length=5)
     forks = models.IntegerField(max_length=5)
+    
 
 
     def __str__(self):
